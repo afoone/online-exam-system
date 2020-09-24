@@ -7,7 +7,7 @@ const morgan = require('morgan');
 const appRoot = require('app-root-path');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
-const expressJsonViews= require('express-json-views');
+const expressJsonViews = require('express-json-views');
 const path = require('path');
 
 const { requestMiddleware } = require('./middlewares');
@@ -27,7 +27,7 @@ const start = async () => {
   });
 
   if (!port)
-    throw new Error('port is require');
+    throw new Error('port is required');
 
   const app = express();
 
@@ -51,8 +51,8 @@ const start = async () => {
 
   app.use('/', rootRoute);
 
-  app.get('*', (req,res) =>{
-    res.sendFile(path.join(__dirname+'/../../build/index.html'));
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname + '/../../build/index.html'));
   });
 
   app.use(requestMiddleware.wirePostRequest);

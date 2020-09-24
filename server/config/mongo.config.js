@@ -4,6 +4,7 @@ const { MongoClient } = require('mongodb');
 
 const connect = () => new Promise((resolve, reject) => {
   const { database: configs, logger } = global.configuration;
+  console.log("config", configs)
 
   MongoClient.connect(
     configs.connectionString,

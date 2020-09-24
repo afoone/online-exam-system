@@ -1,7 +1,7 @@
 {
-  "fullname": "Quang Dat Pham",
-  "dob": "07/15/2000",
-  "nationality": "Vietnamese",
+  "fullname": "Alfonso Tienda Braulio (forked)",
+  "dob": "06/06/1974",
+  "nationality": "Spain",
   "role": "Full-stack Web Developer",
   "description": "Curious - Ambitious - Adventurous.\nI\"m a well self-study person. A responsible person, always actively learning, ambitious and eager for dedication.\nI love sharing my knowledge. It is not property and therefore can not be owned by anyone.",
   "professionalSkills": [
@@ -12,7 +12,8 @@
     "Bash scripting"
   ],
   "interests": [
-    "traveling", "programming"
+    "traveling",
+    "programming"
   ],
   "skills": {
     "frontend": [
@@ -35,7 +36,7 @@
       "Zeplin",
       "InvisionApp"
     ],
-    "database":[
+    "database": [
       "MySQL",
       "MongoDB"
     ],
@@ -47,9 +48,8 @@
     ]
   },
   "contact": {
-    "email": "quangdat2000.pham@gmail.com",
-    "phone": "+84383545450",
-    "github": "https://github.com/quangdatpham",
+    "email": "afoone@hotmail.com",
+    "github": "https://github.com/afoone",
     "linkedin": "https://www.linkedin.com/in/quang-dat-pham-895235163/"
   }
 }
