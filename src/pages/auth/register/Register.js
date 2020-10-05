@@ -12,7 +12,7 @@ class Register extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            tabs: [ 'signup', 'information', 'verify' ],
+            tabs: ['signup', 'information', 'verify'],
             currentTab: 0,
             info: {
                 username: '',
@@ -25,10 +25,9 @@ class Register extends Component {
 
         this.changeInfo = this.changeInfo.bind(this);
         this.signUp = this.signUp.bind(this);
-        this.changeTab = this.changeTab.bind(this);
     }
 
-    changeTab(tabName, next) {
+    changeTab = (tabName, next) => {
         const { currentTab, tabs } = this.state;
         if (next === 'next') {
             tabName = tabs[(currentTab + 1) % tabs.length];
@@ -38,7 +37,7 @@ class Register extends Component {
         const activeTab = document.querySelector(`.tab.active`);
         const boxTab = document.querySelector(`.box-tab.${tabName}`);
         const tab = document.querySelector(`.tab.${tabName}`);
-        
+
         activeBoxTab.classList.remove('active');
         activeTab.classList.remove('active');
 
@@ -50,7 +49,7 @@ class Register extends Component {
         });
     }
 
-    changeInfo(prop, val) {
+    changeInfo = (prop, val) => {
         this.setState({
             info: { [prop]: val }
         });
@@ -59,7 +58,7 @@ class Register extends Component {
     signUp(e) {
         e && e.preventDefault();
         const { username, password, confirm, email, phone } = this.state.info;
-        
+
         console.log({ username, password, confirm, email, phone });
     }
 
@@ -72,7 +71,7 @@ class Register extends Component {
                 <Nav></Nav>
                 <div className="form-container">
                     <div className="form-navigate">
-                        <ControlTab changeTab={this.changeTab}/>
+                        <ControlTab changeTab={this.changeTab} />
                     </div>
                     <div className="form-content">
                         <form className="boxes" onSubmit={e => this.register(e)}>
@@ -82,7 +81,7 @@ class Register extends Component {
                                     value={username}
                                     onChange={(val) => this.changeInfo('username', val)}
                                     label="username"
-                                    placeholder="quangdatpham" />
+                                    placeholder="ususario" />
                                 <InputForm
                                     tabIndex={2}
                                     value={password}
@@ -122,7 +121,7 @@ class Register extends Component {
                             {
                                 (function () {
                                     if (currentTab === 1)
-                                        return <ButtonPrimary handleClick={() => {this.register(); this.changeTab(null, 'next')}}>Register</ButtonPrimary>
+                                        return <ButtonPrimary handleClick={() => { this.register(); this.changeTab(null, 'next') }}>Register</ButtonPrimary>
                                     else if (currentTab === 2)
                                         return <Link to='/'><ButtonPrimary>Home</ButtonPrimary></Link>
                                     else
